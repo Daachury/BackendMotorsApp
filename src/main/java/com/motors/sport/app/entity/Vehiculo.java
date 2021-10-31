@@ -19,6 +19,8 @@ public class Vehiculo {
 	
 	private String marca;
 	
+	private String referencia;
+	
 	private String nuevo;
 	
 	private String kilometraje;
