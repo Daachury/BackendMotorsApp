@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,10 +37,15 @@ public class VehiculosController {
 	public ResponseEntity<List<Vehiculo>> readvehiculos(){
 		return new ResponseEntity<List<Vehiculo>>(repository.findAll(),HttpStatus.OK);
 	}
-
+	
 	@GetMapping("/allVehiculo/{id}")
 	public ResponseEntity<Vehiculo> readvehiculo(@PathVariable Long id){
 		return new ResponseEntity<Vehiculo>(repository.findById(id).get(),HttpStatus.OK);
 	}
 	
+	@DeleteMapping("allVehiculo/{id}")
+	public ResponseEntity<Vehiculo> deleteVehiculo(@PathVariable Long id){
+		repository.deleteById(id);
+		return new ResponseEntity<Vehiculo>(HttpStatus.NO_CONTENT);
+	}
 }
