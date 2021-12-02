@@ -14,17 +14,23 @@ import lombok.Data;
 public class Componentes {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idComponente;
 	
-	private int idVehiculo;
+	private long vidaUtil;
 	
-	private int tipoComponente;
-	
-	private String vidaUtil;
-	
-	private String estado;
+	private String nombre;
 	
 	private String reutilizable;
+	
+	private long idVehiculo;
+	
+	/*@JoinColumn(name = "idVehiculo", referencedColumnName = "idVehiculo")
+	@ManyToOne(optional = false)
+	private Vehiculo idVehiculo;*/
+
+	/*@OneToMany(cascade = CascadeType.ALL, mappedBy = "idMantenimiento")
+	private List<Mantenimientos> mantenimientosList;*/
+
 	
 }

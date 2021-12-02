@@ -14,7 +14,18 @@ import lombok.Data;
 public class Historial {
 
 
-		@Id
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long idAlerta;
+
+	private String fecha;
+	
+	private String observaciones;
+	
+	private int idUsuario;
+	
+	private int idVehiculo;
+		/*@Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		private Long idAlerta;
 
@@ -24,6 +35,6 @@ public class Historial {
 		
 		private int idUsuario;
 		
-		private int idVehiculo;
+		private int idVehiculo;*/
 		
 }

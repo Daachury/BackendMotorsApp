@@ -15,9 +15,7 @@ public class Modelo {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long idmodelo;
-
-	private int idVehiculo;
+	private Long idModelo;
 	
 	private String modelo;
 	
@@ -26,4 +24,10 @@ public class Modelo {
 	private String tipo;
 	
 	private String estado;
+	
+	/*@OneToMany(cascade = CascadeType.ALL, mappedBy = "idVehiculo")
+	private List<Vehiculo> vehiculoList;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idPartesVehiculo")
+	private List<PartesVehiculo> partesVehiculoList;*/
 }

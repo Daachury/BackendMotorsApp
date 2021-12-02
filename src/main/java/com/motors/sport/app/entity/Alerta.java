@@ -13,6 +13,7 @@ import lombok.Data;
 @Data
 public class Alerta {
 	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idAlerta;
@@ -24,6 +25,20 @@ public class Alerta {
 	private String observaciones;
 	
 	private String fecha;
+	
+	/*@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long idAlerta;
+	
+	private String nombre;
+	
+	private String observaciones;
+	
+	private String fecha;
+	
+	@JoinColumn(name = "idVehiculo", referencedColumnName = "idVehiculo")
+	@ManyToOne(optional = false)
+	private Vehiculo idVehiculo;*/
 	
 	
 	

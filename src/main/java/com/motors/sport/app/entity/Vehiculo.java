@@ -14,15 +14,31 @@ import lombok.Data;
 public class Vehiculo {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idVehiculo;
+
+	private String nombre;
+
+	private Boolean nuevo;
+
+	private Integer kilometraje;
 	
-	private String marca;
+	private Long idUsuario;	
 	
-	private String referencia;
+	private Long  idModelo;
+
+	/*@JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
+	@ManyToOne(optional = false)
+	private Usuario idUsuario;
 	
-	private String nuevo;
+	@JoinColumn(name = "idModelo", referencedColumnName = "idModelo")
+	@ManyToOne(optional = false)
+	private Modelo idModelo;*/
 	
-	private String kilometraje;
+	/*@OneToMany(cascade = CascadeType.ALL, mappedBy = "idComponente")
+	private List<Componentes> componentesList;*/
+	
+	/*@OneToMany(mappedBy = "idAlerta")
+	private List<Alerta> alertaList;*/
 	
 }

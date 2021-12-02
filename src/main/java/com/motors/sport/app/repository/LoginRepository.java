@@ -7,6 +7,6 @@ import com.motors.sport.app.entity.Usuario;
 
 @Repository
 public interface LoginRepository extends JpaRepository<Usuario, Long>{
-
+	public Usuario findByNombre (String username);
 	
 }

@@ -22,5 +22,19 @@ public class Mantenimientos {
 	private String nombre;
 	
 	private String kilometraje;
+	
+	private Long idPartesVehiculo;
+	
+	/*@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long idmantenimientos;
+	
+	private String nombre;
+	
+	private String kilometraje;
+	
+	@JoinColumn(name = "idComponente", referencedColumnName = "idComponente")
+	@ManyToOne(optional = false)
+	private Componentes idComponente;*/
 
 }

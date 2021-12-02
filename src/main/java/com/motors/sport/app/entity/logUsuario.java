@@ -17,13 +17,13 @@ public class logUsuario {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idlog;
 	
-	private int idUsuario;
-	
 	private String accion;
 	
 	private String fecha;
-	
-	private int idVehiculo;
+
+	/*@JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
+	@ManyToOne(optional = false)
+	private Usuario idUsuario;*/
 
 	
 
