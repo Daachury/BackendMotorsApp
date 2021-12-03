@@ -19,6 +19,7 @@ import com.motors.sport.app.repository.LoginRepository;
 
 public interface UsuarioService {
 	
+
 	public Usuario findByNombre (String username);
 
 }
